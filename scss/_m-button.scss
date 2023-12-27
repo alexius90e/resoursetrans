@@ -1,0 +1,14 @@
+.button {
+  padding: 21px 93px 20px 26px;
+  transition: $baseTransition;
+  will-change: transform;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
