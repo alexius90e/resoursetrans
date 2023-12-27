@@ -465,6 +465,7 @@ ul {
   }
 }
 .technologies__slide {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -490,6 +491,27 @@ ul {
     min-height: 520px;
     padding: 40px 10px;
   }
+}
+.technologies__slide::before, .technologies__slide::after {
+  content: "";
+  top: 0;
+  position: absolute;
+  display: inline-block;
+  width: 170px;
+  height: 20px;
+  background: url(../img/decor.svg) top left no-repeat;
+}
+@media (max-width: 576px) {
+  .technologies__slide::before, .technologies__slide::after {
+    background-size: auto 14px;
+  }
+}
+.technologies__slide::before {
+  left: 0;
+}
+.technologies__slide::after {
+  right: 0;
+  transform: scaleX(-1);
 }
 .technologies__slide-title {
   min-height: 82px;

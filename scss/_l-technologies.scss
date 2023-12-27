@@ -128,6 +128,7 @@
   }
 
   &__slide {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,6 +150,30 @@
     @include mobile {
       min-height: 520px;
       padding: 40px 10px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      top: 0;
+      position: absolute;
+      display: inline-block;
+      width: 170px;
+      height: 20px;
+      background: url(../img/decor.svg) top left no-repeat;
+
+      @include mobile {
+        background-size:  auto 14px;
+      }
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+      transform: scaleX(-1);
     }
 
     &-title {
