@@ -97,16 +97,19 @@ ul {
   max-width: 260px;
   width: 100%;
   padding: 15px;
-  color: var(--bodi-2, #fff);
+  color: #FFFFFF;
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
-  line-height: 120%;
+  line-height: 100%;
+  text-transform: uppercase;
   border: 1px solid #5EB83E;
+  background: rgba(255, 255, 255, 0);
   -moz-user-select: none;
    -ms-user-select: none;
        user-select: none;
   transition: all ease-in-out 0.15s;
+  cursor: pointer;
 }
 .button:hover {
   background-color: #5EB83E;
@@ -435,4 +438,163 @@ ul {
   .priorities__card-text {
     font-size: 16px;
   }
+}
+
+.consultation {
+  padding: 120px 0;
+  background-color: #005B9F;
+}
+@media (max-width: 768px) {
+  .consultation {
+    padding: 100px 0;
+  }
+}
+@media (max-width: 576px) {
+  .consultation {
+    padding: 80px 0;
+  }
+}
+.consultation__body {
+  position: relative;
+  z-index: 1;
+  max-width: 846px;
+  margin: 0 auto;
+}
+.consultation__body::after, .consultation__body::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 320px;
+  width: 320px;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  background-color: #5EB83E;
+}
+@media (max-width: 576px) {
+  .consultation__body::after, .consultation__body::before {
+    height: 220px;
+    width: 220px;
+  }
+}
+.consultation__body::after {
+  top: -12px;
+  right: -12px;
+}
+@media (max-width: 576px) {
+  .consultation__body::after {
+    top: -6px;
+    right: -6px;
+  }
+}
+.consultation__body::before {
+  bottom: -12px;
+  left: -12px;
+  transform: rotate(180deg);
+}
+@media (max-width: 576px) {
+  .consultation__body::before {
+    bottom: -6px;
+    left: -6px;
+  }
+}
+.consultation__content {
+  padding: 60px 60px 80px;
+  box-sizing: border-box;
+  background-color: #3B85BC;
+}
+@media (max-width: 992px) {
+  .consultation__content {
+    padding: 60px 40px 80px;
+  }
+}
+@media (max-width: 576px) {
+  .consultation__content {
+    padding: 40px 24px 56px;
+  }
+}
+.consultation__title {
+  margin: 0 0 36px;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px;
+}
+@media (max-width: 576px) {
+  .consultation__title {
+    font-size: 24px;
+    line-height: 120%;
+  }
+}
+.consultation__call-us, .consultation__make-order {
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+@media (max-width: 576px) {
+  .consultation__call-us, .consultation__make-order {
+    font-size: 14px;
+  }
+}
+.consultation__call-us {
+  margin: 0 0 12px;
+}
+.consultation__make-order {
+  max-width: 410px;
+  margin: 0 auto 16px;
+}
+.consultation__phone {
+  margin: 0 0 49px;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+}
+@media (max-width: 992px) {
+  .consultation__phone {
+    margin: 0 0 40px;
+    font-size: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .consultation__phone {
+    margin: 0 0 36px;
+    font-size: 50px;
+  }
+}
+@media (max-width: 576px) {
+  .consultation__phone {
+    margin: 0 0 32px;
+    font-size: 34px;
+    font-weight: 700;
+  }
+}
+@media (max-width: 400px) {
+  .consultation__phone {
+    margin: 0 0 24px;
+    font-size: 26px;
+  }
+}
+.consultation__phone a {
+  color: #FFFFFF;
+}
+.consultation__buttons {
+  display: flex;
+  justify-content: center;
+}
+.consultation__buttons .button {
+  color: #FFFFFF;
+  background-color: #5EB83E;
+}
+.consultation__buttons .button:hover {
+  color: #5EB83E;
+  background-color: #FFFFFF;
+}
+.consultation__buttons .button::after {
+  display: none;
 }

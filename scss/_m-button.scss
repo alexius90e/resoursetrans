@@ -8,14 +8,17 @@
   max-width: 260px;
   width: 100%;
   padding: 15px;
-  color: var(--bodi-2, #fff);
+  color: $body2;
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
-  line-height: 120%;
+  line-height: 100%;
+  text-transform: uppercase;
   border: 1px solid $body4;
+  background: rgba($color: $body2, $alpha: 0);
   user-select: none;
   transition: $baseTransition;
+  cursor: pointer;
 
   &:hover {
     background-color: $body4;

@@ -1,3 +1,162 @@
 .consultation {
-  
+  padding: 120px 0;
+  background-color: $body3;
+
+  @include tablet {
+    padding: 100px 0;
+  }
+
+  @include mobile {
+    padding: 80px 0;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 1;
+    max-width: 846px;
+    margin: 0 auto;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      height: 320px;
+      width: 320px;
+      clip-path: polygon(100% 0, 0 0, 100% 100%);
+      background-color: $body4;
+
+      @include mobile {
+        height: 220px;
+        width: 220px;
+      }
+    }
+
+    &::after {
+      top: -12px;
+      right: -12px;
+
+      @include mobile {
+        top: -6px;
+        right: -6px;
+      }
+    }
+
+    &::before {
+      bottom: -12px;
+      left: -12px;
+      transform: rotate(180deg);
+
+      @include mobile {
+        bottom: -6px;
+        left: -6px;
+      }
+    }
+  }
+
+  &__content {
+    padding: 60px 60px 80px;
+    box-sizing: border-box;
+    background-color: $dop1;
+
+    @include laptop {
+      padding: 60px 40px 80px;
+    }
+
+    @include mobile {
+      padding: 40px 24px 56px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 36px;
+    color: $body2;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 44px;
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 120%;
+    }
+  }
+
+  &__call-us,
+  &__make-order {
+    color: $body2;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__call-us {
+    margin: 0 0 12px;
+  }
+
+  &__make-order {
+    max-width: 410px;
+    margin: 0 auto 16px;
+  }
+
+  &__phone {
+    margin: 0 0 49px;
+    color: $body2;
+    text-align: center;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+
+    @include laptop {
+      margin: 0 0 40px;
+      font-size: 60px;
+    }
+
+    @include tablet {
+      margin: 0 0 36px;
+      font-size: 50px;
+    }
+
+    @include mobile {
+      margin: 0 0 32px;
+      font-size: 34px;
+      font-weight: 700;
+    }
+
+    @include mobilesm {
+      margin: 0 0 24px;
+      font-size: 26px;
+    }
+
+    & a {
+      color: $body2;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+
+    & .button {
+      color: $body2;
+      background-color: $body4;
+
+      &:hover {
+        color: $body4;
+        background-color: $body2;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
 }
