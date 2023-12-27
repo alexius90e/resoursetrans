@@ -1,3 +1,74 @@
 .priorities {
-  
+  padding: 160px 0;
+
+  @include tablet {
+    padding: 120px 0;
+  }
+
+  @include mobile {
+    padding: 80px 0;
+  }
+
+  &__title {
+    margin: 0 0 24px;
+    color: $body1;
+  }
+
+  &__description {
+    max-width: 846px;
+    margin: 0 auto 60px;
+    color: $body1;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    text-align: center;
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  &__card {
+    flex: 1 1 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    @include laptop {
+      flex: 1 1 40%;
+    }
+
+    @include mobile {
+      flex: 1 1 100%;
+    }
+
+    &-figure {
+      &-image {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-text {
+      margin: 0;
+      color: $body1;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      text-align: center;
+
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+  }
 }
