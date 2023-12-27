@@ -416,6 +416,21 @@ ul {
   opacity: 0.5;
 }
 
+.first-screen {
+  max-height: 1020px;
+  height: 100vh;
+  background-image: url(../img/first-screen-bg.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.first-screen .container {
+  max-width: 1920px;
+  height: 100%;
+  padding: 0;
+  background: url(../img/first-screen-decor.svg) center bottom no-repeat;
+  background-size: 100%;
+}
+
 .about {
   padding: 160px 0 208px;
 }
