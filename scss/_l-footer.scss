@@ -1,4 +1,312 @@
 .footer {
+  padding: 120px 0 96px;
+  background-color: $body1;
+
+  @include tablet {
+    padding: 80px 0;
+  }
+
   & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    @include tablet {
+      gap: 40px;
+    }
+  }
+
+  &__contacts {
+    flex: 1 1 400px;
+
+    @include desktop {
+      flex: 1 1 360px;
+      order: 0;
+    }
+
+    @include tablet {
+      flex: 1 1 100%;
+      order: 1;
+    }
+  }
+
+  &__logo {
+    margin: 0 0 47px;
+
+    & a {
+      display: inline-block;
+
+      & img {
+        display: inline-block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    margin: 0 0 28px;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: $body2;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+
+      @include tablet {
+        flex: 1 1 42%;
+        font-size: 18px;
+      }
+
+      @include mobile {
+        flex: 0 1 auto;
+        font-size: 16px;
+      }
+
+      &:before {
+        content: "";
+        flex: 0 0 auto;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      &_location {
+        max-width: 400px;
+        margin-bottom: 5px;
+        color: rgba($color: $body2, $alpha: 0.5);
+        font-size: 16px;
+
+        &:before {
+          width: 36px;
+          height: 36px;
+          background-image: url(../img/icons/location.svg);
+        }
+      }
+
+      &_hotline {
+        &:before {
+          background-image: url(../img/icons/hotline.svg);
+        }
+      }
+
+      &_phone {
+        &:before {
+          background-image: url(../img/icons/wireless.svg);
+        }
+      }
+
+      &_mail {
+        &:before {
+          background-image: url(../img/icons/mail.svg);
+        }
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &-link {
+      display: inline-block;
+      width: 44px;
+      height: 44px;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      &_vk {
+        background-image: url(../img/icons/vk.svg);
+      }
+
+      &_tg {
+        background-image: url(../img/icons/telegram.svg);
+      }
+    }
+  }
+
+  &__nav {
+    flex: 0 1 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 27px 25px;
+    max-width: 400px;
+
+    @include desktop {
+      flex: 1 1 100%;
+      order: 2;
+      max-width: none;
+    }
+
+    @include tablet {
+      flex: 1 1 100%;
+      order: 1;
+    }
+
+    &-link {
+      flex: 1 1 40%;
+      display: inline-block;
+      color: $body2;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      text-transform: uppercase;
+
+      @include desktop {
+        flex: 0 1 auto;
+      }
+
+      @include tablet {
+        font-size: 18px;
+      }
+
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__links {
+    flex: 1 1 270px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include desktop {
+      order: 1;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: $body2;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+
+      @include tablet {
+        font-size: 18px;
+      }
+
+      @include mobile {
+        font-size: 16px;
+      }
+
+      &::before {
+        content: "";
+        flex: 0 0 auto;
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      &_account {
+        &::before {
+          background-image: url(../img/icons/account.svg);
+        }
+      }
+
+      &_app {
+        &::before {
+          background-image: url(../img/icons/app.svg);
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    flex: 1 1 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    order: 3;
+    gap: 24px;
+
+    @include desktop {
+      justify-content: flex-start;
+    }
+
+    &-copyright {
+      color: $body2;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+    }
+
+    &-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      @include mobile {
+        flex-wrap: wrap;
+      }
+
+      &-item {
+        flex: 0 0 auto;
+        color: $body2;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        text-decoration-line: underline;
+        opacity: 0.5;
+      }
+    }
+
+    &-developer {
+      & a {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        & img {
+          display: inline-block;
+          max-width: 100%;
+          height: auto;
+        }
+
+        & span {
+          display: inline-block;
+          max-width: 240px;
+          color: $body2;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 120%;
+          text-decoration-line: underline;
+          opacity: 0.5;
+        }
+      }
+    }
   }
 }
