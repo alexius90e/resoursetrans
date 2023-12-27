@@ -1,4 +1,261 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  padding: 44px 0;
+  transition: background-color ease-in-out 0.2s, padding ease-in-out 0.2s;
+
+  @include tablet {
+    padding: 24px 0;
+  }
+
+  @include mobile {
+    padding: 16px 0;
+  }
+
+  &.scrolled {
+    padding: 24px 0;
+    background-color: $body2;
+    box-shadow: 0 4px 22px rgba($color: #000000, $alpha: 0.1);
+
+    @include mobile {
+      padding: 16px 0;
+    }
+  }
+
+  &.active {
+    background-color: $body2;
+  }
+
   & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 88px;
+
+    @include desktoplg {
+      gap: 24px;
+    }
+  }
+
+  &__logo {
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    &-image {
+      display: inline-block;
+      max-width: 100%;
+      height: auto;
+
+      @include desktoplg {
+        max-width: 240px;
+      }
+
+      @include desktop {
+        display: none;
+      }
+
+      &_sm {
+        display: none;
+        height: 52px;
+        width: auto;
+
+        @include desktop {
+          display: inline-block;
+        }
+
+        @include mobile {
+          height: auto;
+        }
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    flex: 1 1 auto;
+
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 12px;
+
+      @include laptop {
+        margin-bottom: 6px;
+      }
+
+      @include tablet {
+        margin-bottom: 0;
+      }
+
+      @include mobile {
+        justify-content: flex-end;
+      }
+    }
+
+    &-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 32px;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+
+    @include tablet {
+      gap: 4px 12px;
+    }
+
+    @include mobile {
+      padding-right: 40px;
+    }
+
+    @include mobilesm {
+      display: none;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 0 0 auto;
+      color: $body1;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+
+      @include tablet {
+        gap: 4px;
+        font-size: 14px;
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+
+        @include tablet {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      &_hotline {
+        &::before {
+          background-image: url(../img/icons/hotline-blue.svg);
+        }
+      }
+
+      &_phone {
+        &::before {
+          background-image: url(../img/icons/wireless-blue.svg);
+        }
+      }
+    }
+  }
+
+  &__controls {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &-button {
+      display: inline-block;
+      height: 24px;
+      width: 24px;
+      padding: 0;
+      border: none;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto 100%;
+      background-color: rgba($color: $body2, $alpha: 0);
+      cursor: pointer;
+
+      &_search {
+        background-image: url(../img/icons/search.svg);
+      }
+
+      &_burger {
+        background-image: url(../img/icons/burger.svg);
+      }
+    }
+  }
+
+  &__nav {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    @include tablet {
+      display: none;
+    }
+
+    &-link {
+      flex: 1 0 auto;
+      color: $body3;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+    }
+  }
+
+  &__account {
+    @include tablet {
+      position: absolute;
+      top: 50%;
+      right: 80px;
+      transform: translateY(-50%);
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto 100%;
+        background-color: rgba($color: $body2, $alpha: 0);
+        background-image: url(../img/icons/account-blue.svg);
+      }
+
+      &-text {
+        color: $body3;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        text-decoration-line: underline;
+
+        @include laptop {
+          display: none;
+        }
+      }
+    }
   }
 }

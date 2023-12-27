@@ -17,6 +17,11 @@
     background-color: $body3;
     padding-top: 184px;
     padding-bottom: 60px;
+
+    @include mobile {
+      padding-top: 120px;
+    }
+
   }
 
   &__content {
@@ -24,6 +29,10 @@
     max-height: calc(100vh - 240px);
     margin: 0 auto;
     overflow: auto;
+
+    @include mobile {
+      max-height: calc(100vh - 180px);
+    }
 
     /* width */
     &::-webkit-scrollbar {
