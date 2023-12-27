@@ -66,7 +66,7 @@ ul {
 }
 @media (max-width: 576px) {
   .h2 {
-    font-size: 36px;
+    font-size: 32px;
   }
 }
 
@@ -365,6 +365,256 @@ ul {
   .about .swiper-button-next {
     right: -40px;
   }
+}
+
+.technologies {
+  padding: 160px 0 206px;
+  background-color: #005B9F;
+  clip-path: polygon(0 0, calc(100% - 160px) 0%, 100% 160px, 100% 100%, 160px 100%, 0% calc(100% - 160px));
+}
+@media (max-width: 768px) {
+  .technologies {
+    padding: 120px 0 160px;
+    clip-path: polygon(0 0, calc(100% - 80px) 0%, 100% 80px, 100% 100%, 80px 100%, 0% calc(100% - 80px));
+  }
+}
+@media (max-width: 576px) {
+  .technologies {
+    padding: 80px 0 120px;
+    clip-path: polygon(0 0, calc(100% - 40px) 0%, 100% 40px, 100% 100%, 40px 100%, 0% calc(100% - 40px));
+  }
+}
+.technologies .container {
+  max-width: 1520px;
+}
+.technologies__title {
+  margin: 0 0 60px;
+  color: #FFFFFF;
+}
+@media (max-width: 768px) {
+  .technologies__title {
+    margin: 0 0 48px;
+  }
+}
+@media (max-width: 576px) {
+  .technologies__title {
+    margin: 0 0 32px;
+  }
+}
+.technologies__slider {
+  position: relative;
+  color: black;
+}
+.technologies__slider .swiper-slide-shadow-left, .technologies__slider .swiper-slide-shadow-right {
+  background-image: linear-gradient(rgba(59, 133, 188, 0.2), rgba(59, 133, 188, 0.2)) !important;
+}
+.technologies__slider .swiper-pagination {
+  top: auto !important;
+  bottom: -48px !important;
+}
+.technologies__slider .swiper-pagination-bullet {
+  height: 12px;
+  width: 14px;
+  border-radius: 0;
+  clip-path: polygon(15% 1%, 100% 0%, 85% 100%, 0 100%);
+  background-color: #FFFFFF;
+  opacity: 0.3;
+}
+.technologies__slider .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+.technologies__slider .swiper-button-prev, .technologies__slider .swiper-button-next {
+  width: 60px;
+  height: 60px;
+  background: url(../img/icons/button-next.svg) center no-repeat;
+  background-size: 100%;
+}
+@media (max-width: 768px) {
+  .technologies__slider .swiper-button-prev, .technologies__slider .swiper-button-next {
+    display: none;
+  }
+}
+.technologies__slider .swiper-button-prev::after, .technologies__slider .swiper-button-next::after {
+  display: none;
+}
+.technologies__slider .swiper-button-prev {
+  left: 14%;
+}
+@media (max-width: 1440px) {
+  .technologies__slider .swiper-button-prev {
+    left: 8%;
+  }
+}
+@media (max-width: 1200px) {
+  .technologies__slider .swiper-button-prev {
+    left: -14px;
+  }
+}
+.technologies__slider .swiper-button-next {
+  right: 14%;
+  transform: rotate(180deg);
+}
+@media (max-width: 1440px) {
+  .technologies__slider .swiper-button-next {
+    right: 8%;
+  }
+}
+@media (max-width: 1200px) {
+  .technologies__slider .swiper-button-next {
+    right: -14px;
+  }
+}
+.technologies__slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 654px;
+  padding: 60px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+}
+@media (max-width: 992px) {
+  .technologies__slide {
+    min-height: 640px;
+    padding: 60px 40px;
+  }
+}
+@media (max-width: 768px) {
+  .technologies__slide {
+    min-height: 600px;
+    padding: 40px 20px;
+  }
+}
+@media (max-width: 576px) {
+  .technologies__slide {
+    min-height: 520px;
+    padding: 40px 10px;
+  }
+}
+.technologies__slide-title {
+  min-height: 82px;
+  margin: 0 0 37px;
+  color: #153D53;
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+@media (max-width: 992px) {
+  .technologies__slide-title {
+    min-height: 64px;
+    margin: 0 0 34px;
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .technologies__slide-title {
+    min-height: 60px;
+    margin: 0 0 30px;
+    font-size: 28px;
+  }
+}
+@media (max-width: 576px) {
+  .technologies__slide-title {
+    min-height: 50px;
+    margin: 0 0 26px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 400px) {
+  .technologies__slide-title {
+    min-height: 42px;
+    margin: 0 0 24px;
+    font-size: 20px;
+  }
+}
+.technologies__slide-figure {
+  margin: 0 0 24px;
+  padding: 0;
+  text-align: center;
+}
+.technologies__slide-figure img {
+  max-width: 100%;
+  height: auto;
+}
+.technologies__slide-list {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0 0 24px;
+  padding: 0;
+  color: #153D53;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  list-style-type: none;
+}
+@media (max-width: 992px) {
+  .technologies__slide-list {
+    gap: 20px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .technologies__slide-list {
+    gap: 16px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .technologies__slide-list {
+    gap: 12px;
+    font-size: 14px;
+  }
+}
+.technologies__slide-buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.technologies__slide-buttons .button {
+  color: #005B9F;
+}
+.technologies__slide-buttons .button:hover {
+  color: #FFFFFF;
+}
+.technologies .swiper-slide-prev .technologies__slide {
+  align-items: flex-end;
+}
+.technologies .swiper-slide-prev .technologies__slide-title {
+  width: 42%;
+  padding-right: 38px;
+}
+.technologies .swiper-slide-next .technologies__slide {
+  align-items: flex-start;
+}
+.technologies .swiper-slide-next .technologies__slide-title {
+  width: 42%;
+  padding-left: 38px;
+}
+.technologies .swiper-slide-prev .technologies__slide, .technologies .swiper-slide-next .technologies__slide {
+  background-color: #3b85bc;
+}
+.technologies .swiper-slide-prev .technologies__slide-title, .technologies .swiper-slide-next .technologies__slide-title {
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.technologies .swiper-slide-prev .technologies__slide-figure, .technologies .swiper-slide-next .technologies__slide-figure {
+  display: none;
+}
+.technologies .swiper-slide-prev .technologies__slide-list, .technologies .swiper-slide-next .technologies__slide-list {
+  display: none;
+}
+.technologies .swiper-slide-prev .technologies__slide-buttons, .technologies .swiper-slide-next .technologies__slide-buttons {
+  display: none;
 }
 
 .priorities {
