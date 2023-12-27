@@ -1,3 +1,149 @@
 .main-menu {
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  transition: transform ease-in-out 0.4s;
+  transform: translateY(-120%);
+  will-change: transform;
+
+  &.active {
+    transform: translateY(0);
+  }
+
+  & .container {
+    max-width: 1920px;
+    background-color: $body3;
+    padding-top: 184px;
+    padding-bottom: 60px;
+  }
+
+  &__content {
+    max-width: 1280px;
+    max-height: calc(100vh - 240px);
+    margin: 0 auto;
+    overflow: auto;
+
+    /* width */
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: rgba($color: $body2, $alpha: 0.05);
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: $dop1;
+    }
+  }
+
+  &__title {
+    max-width: 434px;
+    margin: 0 0 48px;
+    color: $dop1;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+
+    @include tablet {
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+  }
+
+  &__blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  &__block {
+    @include tablet {
+      flex: 1 1 100%;
+    }
+
+    &_other {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+
+      @include laptop {
+        flex: 1 1 100%;
+      }
+    }
+
+    &-title {
+      margin: 0 0 24px;
+
+      & a {
+        color: $body4;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        text-decoration-line: underline;
+
+        @include tablet {
+          display: inline-block;
+          margin: 0 auto;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+
+    &-subtitle {
+      margin: 0;
+      max-width: 240px;
+
+      & a {
+        color: $body2;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        text-decoration-line: underline;
+      }
+    }
+
+    &-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      @include tablet {
+        align-items: center;
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      max-width: 412px;
+      color: $body2;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      transition: $baseTransition;
+
+      @include desktop {
+        max-width: 380px;
+      }
+
+      @include tablet {
+        text-align: center;
+      }
+
+      &:hover {
+        transform: translateX(16px);
+      }
+    }
+  }
 }
