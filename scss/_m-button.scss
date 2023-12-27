@@ -1,14 +1,38 @@
 .button {
-  padding: 21px 93px 20px 26px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 260px;
+  width: 100%;
+  padding: 15px;
+  color: var(--bodi-2, #fff);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  border: 1px solid $body4;
+  user-select: none;
   transition: $baseTransition;
-  will-change: transform;
-  cursor: pointer;
 
   &:hover {
-    transform: scale(1.03);
+    background-color: $body4;
   }
 
-  &:active {
-    transform: scale(0.97);
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 19px;
+    box-sizing: border-box;
+    background: url(../img/icons/right-shevron.svg) center no-repeat;
+    background-size: 100%;
+    transition: $baseTransition;
+  }
+
+  &:hover::after {
+    background-image: url(../img/icons/right-shevron-white.svg);
   }
 }

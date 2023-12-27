@@ -88,16 +88,41 @@ ul {
 }
 
 .button {
-  padding: 21px 93px 20px 26px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 260px;
+  width: 100%;
+  padding: 15px;
+  color: var(--bodi-2, #fff);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  border: 1px solid #5EB83E;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
   transition: all ease-in-out 0.15s;
-  will-change: transform;
-  cursor: pointer;
 }
 .button:hover {
-  transform: scale(1.03);
+  background-color: #5EB83E;
 }
-.button:active {
-  transform: scale(0.97);
+.button::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 19px;
+  box-sizing: border-box;
+  background: url(../img/icons/right-shevron.svg) center no-repeat;
+  background-size: 100%;
+  transition: all ease-in-out 0.15s;
+}
+.button:hover::after {
+  background-image: url(../img/icons/right-shevron-white.svg);
 }
 
 .about {
@@ -286,25 +311,6 @@ ul {
    -ms-user-select: none;
        user-select: none;
 }
-.about__slide-link {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 260px;
-  width: 100%;
-  padding: 15px;
-  color: var(--bodi-2, #fff);
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-  border: 1px solid var(--bodi-4, #5eb83e);
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
-}
 .about .swiper-pagination {
   top: auto !important;
   bottom: -48px !important;
@@ -314,6 +320,11 @@ ul {
   width: 14px;
   border-radius: 0;
   clip-path: polygon(15% 1%, 100% 0%, 85% 100%, 0 100%);
+  background-color: #005B9F;
+  opacity: 0.3;
+}
+.about .swiper-pagination-bullet-active {
+  opacity: 1;
 }
 .about .swiper-button-prev, .about .swiper-button-next {
   width: 60px;

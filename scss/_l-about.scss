@@ -183,24 +183,6 @@
       text-align: center;
       user-select: none;
     }
-
-    &-link {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      max-width: 260px;
-      width: 100%;
-      padding: 15px;
-      color: var(--bodi-2, #fff);
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 120%;
-      border: 1px solid var(--bodi-4, #5eb83e);
-      user-select: none;
-    }
   }
 
   & .swiper {
@@ -213,6 +195,12 @@
         width: 14px;
         border-radius: 0;
         clip-path: polygon(15% 1%, 100% 0%, 85% 100%, 0 100%);
+        background-color: $body3;
+        opacity: 0.3;
+
+        &-active  {
+          opacity: 1;
+        }
       }
     }
 
